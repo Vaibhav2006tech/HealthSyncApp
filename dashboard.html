@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<title>HealthSync Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="darkmode.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<header class="main-header">
+
+<h1>HealthSync Dashboard</h1>
+
+<button id="darkToggle">🌙 Dark Mode</button>
+
+<button id="logoutBtn">Logout</button>
+
+</header>
+
+
+<div class="health-score">
+
+<h2>Your Health Score</h2>
+
+<div class="score-circle">
+<span id="healthScore"></span>
+</div>
+
+<p id="scoreMessage"></p>
+
+</div>
+
+
+<div class="metrics">
+
+<div class="metric-card bmi">
+<h3>BMI</h3>
+<p id="bmi"></p>
+<span>kg/m²</span>
+</div>
+
+<div class="metric-card bmr">
+<h3>BMR</h3>
+<p id="bmr"></p>
+<span>kcal/day</span>
+</div>
+
+<div class="metric-card calorieNeed">
+<h3>Daily Calories</h3>
+<p id="calorieNeed"></p>
+<span>kcal</span>
+</div>
+
+<div class="metric-card waterNeed">
+<h3>Water Needed</h3>
+<p id="recommendedWater"></p>
+<span>L/day</span>
+</div>
+
+</div>
+
+
+<div class="charts-grid">
+
+<div class="chart-card">
+<h3>Calories</h3>
+<canvas id="calorieChart"></canvas>
+</div>
+
+<div class="chart-card">
+<h3>Water Intake</h3>
+<canvas id="waterChart"></canvas>
+</div>
+
+<div class="chart-card">
+<h3>Sleep</h3>
+<canvas id="sleepChart"></canvas>
+</div>
+
+<div class="chart-card">
+<h3>Exercise</h3>
+<canvas id="exerciseChart"></canvas>
+</div>
+
+</div>
+
+
+<div class="weekly-section">
+
+<h2>Weekly Health Trends</h2>
+
+<canvas id="weeklyChart"></canvas>
+
+</div>
+
+
+<div class="chatbot">
+
+<h2>Health Assistant 🤖</h2>
+
+<div id="chatWindow"></div>
+
+<div class="chat-options">
+
+<button onclick="botQuestion('sleep')">
+What is your opinion on my sleep schedule?
+</button>
+
+<button onclick="botQuestion('water')">
+Do you think my hydration level is sufficient?
+</button>
+
+<button onclick="botQuestion('bmi')">
+Is my BMI in a healthy range?
+</button>
+
+<button onclick="botQuestion('exercise')">
+Am I exercising enough daily?
+</button>
+
+<button onclick="botQuestion('diet')">
+Can you suggest improvements to my diet?
+</button>
+
+</div>
+
+</div>
+
+
+<script src="dashboard.js"></script>
+<script src="chatbot.js"></script>
+<script src="theme.js"></script>
+
+<script type="module" src="auth.js"></script>
+
+</body>
+</html>

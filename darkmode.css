@@ -1,0 +1,22 @@
+.dark-mode{
+
+background:#121212;
+color:white;
+
+}
+
+.dark-mode .chart-card,
+.dark-mode .chatbot,
+.dark-mode .form-container{
+
+background:#1e1e1e;
+color:white;
+
+}
+
+.dark-mode input{
+
+background:#333;
+color:white;
+
+}
